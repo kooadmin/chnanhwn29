@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | KruCPU</title>
+    <link rel="shortcut icon" type="image/x-icon" href="pc.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        label {
+            display: inline;
+
+        }
+
+        #page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #content-wrap {
+            padding-bottom: 5rem;
+            /* Footer height */
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Footer height https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <b><i class="bi bi-pc"></i> KruCPU</b>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">หน้าแรก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">ติดต่อเรา</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="username" placeholder="ชื่อผู้ใช้งาน"
+                                name="username" required>
+                            <input type="password" class="form-control" id="password" placeholder="รหัสผ่าน"
+                                name="password" required>
+                            <button type="submit" name="login" class="input-group-text btn btn-success"><i
+                                    class="bi bi-box-arrow-in-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container" id="content-wrap">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="card">
+                        <div class="card-body shadow-lg">
+                            <h3><b>*แบบฟอร์มลงทะเบียนฉีดวัคซีนโควิด 19 ห.ว.น.</b></h3><br>
+                            <form class="row g-3 needs-validation" novalidate>
+                                <div class="row g-2">
+                                    <div class="form-floating col-xl-2">
+                                        <input type="number" class="form-control" id="stdID"
+                                            placeholder="รหัสประจำตัวนักเรียน" name="stdID" required>
+                                        <label for="stdID">รหัสประจำตัวนักเรียน</label>
+                                    </div>
+                                    <div class="form-floating col-xl-4">
+                                        <input type="text" class="form-control" id="FnameLname"
+                                            placeholder="ชื่อ - นามสกุล" name="FnameLname" required>
+                                        <label for="FnameLname">ชื่อ - นามสกุล</label>
+                                    </div>
+                                    <div class="form-floating col-xl-2">
+                                        <div class="form-check form-check-inline" id="1">
+                                            <input class="form-check-input" type="radio" name="genderSTD"
+                                                id="genderSTD1" value="1" required>
+                                            <label class="form-check-label" for="genderSTD1">เพศชาย</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="genderSTD"
+                                                id="genderSTD2" value="2" required>
+                                            <label class="form-check-label" for="genderSTD2">เพศหญิง</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-xl-4">
+                                        <input type="number" class="form-control" id="stdTEL"
+                                            placeholder="เบอร์โทรศัพท์" name="stdTEL" required>
+                                        <label for="stdTEL">เบอร์โทรศัพท์</label>
+                                    </div>
+                                    <div class="form-floating col-xl-12">
+                                        <select class="form-select" id="VaccineNUM" name="VaccineNUM" required>
+                                            <option selected></option>
+                                            <option value="1">เข็มที่ 1</option>
+                                            <option value="2">เข็มที่ 2</option>
+                                            <option value="3">เข็มที่ 3</option>
+                                            <option value="4">เข็มที่ 4</option>
+                                            <option value="5">เข็มที่ 5</option>
+                                            <option value="6">เข็มที่ 6</option>
+                                        </select>
+                                        <label for="VaccineNUM">จำนวนเข็ม</label>
+                                    </div>
+                                    <div class="form-floating col-xl-4">
+                                        <input type="email" class="form-control" id="stdMAIL" placeholder="อีเมล"
+                                            name="stdMAIL" required>
+                                        <label for="stdMAIL">อีเมลล</label>
+                                    </div>
+                                    <div class="form-floating col-xl-4">
+                                        <input type="text" class="form-control" id="FnameLnameEG"
+                                            placeholder="ชื่อบุคคลที่สามารถติดต่อได้กรณีฉุกเฉิน" name="FnameLnameEG"
+                                            required>
+                                        <label for="FnameLnameEG">ชื่อบุคคลที่สามารถติดต่อได้กรณีฉุกเฉิน</label>
+                                    </div>
+                                    <div class="form-floating col-xl-4">
+                                        <input type="number" class="form-control" id="stdTELEG"
+                                            placeholder="เบอร์โทรศัพท์ที่สามารถติดต่อได้กรณีฉุกเฉิน" name="stdTELEG"
+                                            required>
+                                        <label for="stdTELEG">เบอร์โทรศัพท์ที่สามารถติดต่อได้กรณีฉุกเฉิน</label><br>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-success" type="submit">บันทึกข้อมูล</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-primary text-center text-light" id="footer">
+            <div class="text-center p-3">
+                © 2022 Saharat Kanbanchong
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/uxl/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

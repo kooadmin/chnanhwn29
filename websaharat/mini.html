@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine HWN</title>
+    <link rel="icon" href="/covid-19-vaccine-clinic-finder.png">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        /* table, td{
+            border: 2px solid red;
+            border-collapse: collapse;
+            margin: auto;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>*แบบฟอร์มลงทะเบียนฉีดวัคซีนโควิด 19 ห.ว.น.</h1>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <p>รหัสประจำตัวนักเรียน :</p>
+                </td>
+                <td><input type="number" id="stdID" placeholder="รหัสประจำตัวนักเรียน" name="stdID" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ชื่อ - นามสกุล :</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="ชื่อ - นามสกุล" name="FnameLname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>เพศ :</p>
+                </td>
+                <td>
+                    <input type="radio" name="genderSTD" value="male" required>ชาย
+                    <input type="radio" name="genderSTD" value="female" required>หญิง
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>เบอร์โทรศัพท์ :</p>
+                </td>
+                <td>
+                    <input type="number" placeholder="เบอร์โทรศัพท์" name="stdTEL" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>จำนวนเข็ม :</p>
+                </td>
+                <td>
+                    <select name="VaccineNUM" required>
+                        <option selected></option>
+                        <option value="1">เข็มที่ 1</option>
+                        <option value="2">เข็มที่ 2</option>
+                        <option value="3">เข็มที่ 3</option>
+                        <option value="4">เข็มที่ 4</option>
+                        <option value="5">เข็มที่ 5</option>
+                        <option value="6">เข็มที่ 6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>อีเมล :</p>
+                </td>
+                <td>
+                    <input type="email" placeholder="อีเมล" name="stdMAIL" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ชื่อบุคคลที่สามารถติดต่อได้กรณีฉุกเฉิน :</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="ชื่อบุคคลที่สามารถติดต่อได้กรณีฉุกเฉิน" name="FnameLnameEG"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>เบอร์โทรศัพท์ที่สามารถติดต่อได้กรณีฉุกเฉิน :</p>
+                </td>
+                <td>
+                    <input type="number" placeholder="เบอร์โทรศัพท์ที่สามารถติดต่อได้กรณีฉุกเฉิน" name="stdTELEG"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button type="submit"> บันทึกข้อมูล</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
